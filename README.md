@@ -80,22 +80,13 @@
 
 4. Update the email HTML template (`email.html`) within the (`src/main/java/santa/email/`) directory to reflect your event's branding or additional details.
 
----
+### Usage
 
-## Usage
+Assume the project is properly set up maven is installed, and the `participants.json` file and `application.properties` are correctly configured. Run the following commands:
 
-1. Compile and run the program:
-   ```bash
-   javac SecretSantaScript.java
-   java santa.SecretSantaScript
-   ```
-2. The script will:
-    - Randomly assign recipients to participants.
-    - Personalize the email template with Secret Santa details.
-    - Send the emails to participants.
-3. Check the logs for status updates and any errors.
-
----
+```bash
+mvn exec:java -Dexec.mainClass="santa.SecretSantaScript"
+```
 
 ## Configuration
 
