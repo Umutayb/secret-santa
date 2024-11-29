@@ -2,7 +2,9 @@
 
 ## Overview
 
-**Secret Santa Script** is a Java application designed to simplify and automate the process of organizing a Secret Santa gift exchange. It pairs participants, generates personalized emails with recipient details, and sends the emails via SMTP, ensuring a smooth and festive experience for all involved.
+**Secret Santa** is a Java application designed to simplify and automate the process of organizing a Secret Santa gift exchange. It pairs participants, generates personalized emails with recipient details, and sends the emails via SMTP, ensuring a smooth and festive experience for all involved.
+
+![alt text](https://github.com/umutayb/secret-santa/blob/main/src/main/resources/Default Email Template.png?raw=true)
 
 ---
 
