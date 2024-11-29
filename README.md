@@ -1,4 +1,4 @@
-# Secret Santa Script 🎅🎁
+# Easy Secret Santa 🎅🎁
 
 ## Overview
 
