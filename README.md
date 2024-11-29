@@ -35,7 +35,8 @@
 
 1. **Java JDK**: Ensure you have Java 8 or above installed (preferably 17).
 2. **SMTP Email Account**: Required for sending emails (e.g., Gmail, Outlook).
-3. **Dependencies**:
+3. Maven should be installed on your agent or local machine.
+4. **Dependencies**:
     - Java Mail API (or an equivalent library for email functionality).
     - Include any additional dependencies for property management or file handling.
 
@@ -82,7 +83,7 @@
 
 ### Usage
 
-Assume the project is properly set up maven is installed, and the `participants.json` file and `application.properties` are correctly configured. Run the following commands:
+Assume the project is properly set up, Maven is installed and the `participants.json` file and `application.properties` are correctly configured. Run the following commands:
 
 ```bash
 mvn exec:java -Dexec.mainClass="santa.SecretSantaScript"
