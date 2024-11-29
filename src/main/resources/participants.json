@@ -1,0 +1,17 @@
+
+{
+  "participants": [
+    {
+      "name": "Mrs. Smith",
+      "email": "mrs-smith@email.com",
+      "address": "Wonderland!",
+      "phoneNumber": "+00000000001"
+    },
+    {
+      "name": "Mr. Smith",
+      "email": "smith@email.com",
+      "address": "Smithland",
+      "phoneNumber": "+00000000000"
+    }
+  ]
+}

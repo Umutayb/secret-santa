@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border: 1px solid #dddddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            color: #FF0000; /* Red for Christmas theme */
+        }
+        .content {
+            line-height: 1.6;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #888888;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #008000; /* Green for Christmas theme */
+        }
+        .btn {
+            display: inline-block;
+            margin: 20px auto;
+            background-color: #FF0000; /* Red for Christmas theme */
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1 class="header">🎄 Secret Santa Alert! 🎁</h1>
+    <div class="content">
+        <p>Hi <span class="highlight">{{Your Name}}</span>!</p>
+        <p>We proudly present you with the promised <span style="color: #FF0000;"><strong>Secret Santa</strong></span> event! Here's all the information you need:</p>
+        <p><strong>🎅 Your Recipient:</strong> <span class="highlight">{{Recipient Name}}</span></p>
+        <p><strong>💶 Gift Budget:</strong> <span class="highlight">{{Budget}}</span></p>
+        <p><strong>📅 Gift Due Date:</strong> <span class="highlight">{{Due Date}}</span></p>
+        <p><strong>📍 Delivery Address:</strong></p>
+        <p>
+            <span class="highlight">{{Recipient Address}}</span><br>
+            <strong>📞 Contact Number:</strong> <span class="highlight">{{Recipient Phone}}</span>
+        </p>
+        <p>Please make sure your gift is thoughtful and brings a smile to your recipient! If you have any questions, feel free to reach out to the organizer.</p>
+    </div>
+    <a href="mailto:{{Organiser Email}}" class="btn">Contact Organizer</a>
+    <div class="footer">
+        <p>Happy gifting and enjoy the holiday cheer!</p>
+        <p>🎅 Your Secret Santa Team</p>
+    </div>
+</div>
+</body>
+</html>
