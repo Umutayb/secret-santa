@@ -77,16 +77,19 @@ public class SecretSantaScript {
     }
 
     static Person getRecipient(Person santa){
-        Person person;
+        Person receiver;
         int randomIndex;
         do {
             randomIndex = new Random().nextInt(receivers.size());
-            person = receivers.get(randomIndex);
+            receiver = receivers.get(randomIndex);
         }
-        while (person.getName().equals(santa.getName()));
+        while (receiver.getName().equals(santa.getName()));
 
         receivers.remove(randomIndex);
-        return person;
+
+        if (Boolean.parseBoolean(ContextStore.get("keep-email-logs", "false")))
+            log.info(santa.getName() + " matched with " + receiver.getName());
+        return receiver;
     }
 
     static List<Person> getParticipants() {
