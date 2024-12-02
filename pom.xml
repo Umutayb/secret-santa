@@ -5,7 +5,7 @@
 
   <groupId>io.github.umutayb</groupId>
   <artifactId>secret-santa</artifactId>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
 
   <name>secret-santa</name>
   <description>A simple Secret Santa program to help you have fun!</description>
