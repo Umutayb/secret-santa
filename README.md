@@ -97,6 +97,12 @@ mvn exec:java -Dexec.mainClass="santa.SecretSantaScript"
 
 This section provides a step-by-step guide to using the JSON Editor UI to manage participant data and execute the Secret Santa functionality.
 
+To start the UI easily:
+
+```bash
+mvn exec:java -Dexec.mainClass="santa.ui.JSONEditorUI"
+```
+
 ---
 
 ### Features Overview
