@@ -35,7 +35,6 @@ public class SecretSantaScript {
     }
 
     public static void main(String[] args) {
-
         log.info("Getting started...");
         EmailUtilities emailUtilities = new EmailUtilities(ContextStore.get("host"));
 
