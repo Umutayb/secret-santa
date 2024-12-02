@@ -20,15 +20,19 @@ import static utils.MappingUtilities.Json.mapper;
 
 public class SecretSantaScript {
 
+    static List<Person> participants;
+    static List<Person> receivers;
+    static Printer log;
+
     static {
         ContextStore.loadProperties("application.properties");
         mapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
         mapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
-    }
 
-    static List<Person> participants = getParticipants();
-    static List<Person> receivers = new ArrayList<>(participants);
-    static Printer log = new Printer(SecretSantaScript.class);
+        participants = getParticipants();
+        receivers = new ArrayList<>(participants);
+        log = new Printer(SecretSantaScript.class);
+    }
 
     public static void main(String[] args) {
 

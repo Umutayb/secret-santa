@@ -4,7 +4,7 @@
 
 **Secret Santa** is a Java application designed to simplify and automate the process of organizing a Secret Santa gift exchange. It pairs participants, generates personalized emails with recipient details, and sends the emails via SMTP, ensuring a smooth and festive experience for all involved.
 
-![alt text](https://github.com/Umutayb/secret-santa/blob/main/src/main/resources/default-email-template.png?raw=true)
+![Default Email Template](https://github.com/Umutayb/secret-santa/blob/main/src/main/resources/default-email-template.png?raw=true)
 
 ---
 
@@ -90,6 +90,75 @@ Assume the project is properly set up, Maven is installed and the `participants.
 ```bash
 mvn exec:java -Dexec.mainClass="santa.SecretSantaScript"
 ```
+
+## Alternatively: How to Use the JSON Editor UI
+
+![JSON Editor](https://github.com/Umutayb/secret-santa/blob/main/src/main/resources/json-editor.png?raw=true)
+
+This section provides a step-by-step guide to using the JSON Editor UI to manage participant data and execute the Secret Santa functionality.
+
+---
+
+### Features Overview
+- **View Participants**: Displays the current participants in a table format.
+- **Add Participants**: Allows adding new participants to the table.
+- **Edit Participants**: Lets you edit participant details directly in the table.
+- **Remove Participants**: Deletes selected participants from the table.
+- **Load JSON**: Loads participant data from a JSON file.
+- **Save JSON**: Saves participant data to a JSON file.
+- **Run Secret Santa**: Saves the data and triggers the Secret Santa functionality.
+
+---
+
+### Steps to Use the UI
+
+#### 1. **Loading Default Participants**
+- On startup, the UI automatically loads participants from `src/main/resources/participants.json`.
+- If the file is missing, a warning is displayed, and you can manually load a JSON file using the "Load JSON" button.
+
+#### 2. **Viewing Participants**
+- Participants are displayed in a table with columns: **Name**, **Email**, **Address**, and **Phone Number**.
+
+#### 3. **Adding a Participant**
+- Click the **"Add Participant"** button to add a new participant.
+- A new row will appear, and the cursor will focus on the **Name** field, prompting you to enter details.
+- You must fill in the current row before adding another.
+
+#### 4. **Editing Participant Details**
+- Click on any cell in the table to edit the data directly.
+- Ensure all required fields are filled out for each participant.
+
+#### 5. **Removing Participants**
+- Select the row(s) you want to delete.
+- Click the **"Remove Selected"** button to remove the participant(s) from the table.
+
+#### 6. **Loading a JSON File**
+- Click the **"Load JSON"** button to load participants from a JSON file.
+- Use the file chooser to select a valid JSON file.
+
+#### 7. **Saving to a JSON File**
+- Click the **"Save JSON"** button to save the current participant data to a JSON file.
+- Use the file chooser to specify the save location.
+- The JSON file is saved in a human-readable format.
+
+#### 8. **Running Secret Santa**
+- Click the **"Run Secret Santa"** button to:
+    1. Save the current participant data to `src/main/resources/participants.json`.
+    2. Execute the `SecretSantaScript.main()` method.
+- A confirmation message is displayed upon successful execution.
+
+---
+
+### Notes
+- **Validation**:
+    - Rows with empty fields are not saved or included in the Secret Santa execution.
+    - You cannot add a new row until the current row is filled.
+- **Default File**:
+    - Ensure `src/main/resources/participants.json` exists for the default load and save functionality.
+- **Error Handling**:
+    - Errors during file operations or script execution are displayed in a popup dialog.
+
+---
 
 ## Configuration
 
