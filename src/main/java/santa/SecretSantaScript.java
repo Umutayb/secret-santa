@@ -22,6 +22,8 @@ public class SecretSantaScript {
 
     static List<Person> participants;
     static List<Person> receivers;
+    static List<String> pairs;
+    static boolean logsOn;
     static Printer log;
 
     static {
@@ -29,6 +31,8 @@ public class SecretSantaScript {
         mapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
         mapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
 
+        logsOn = Boolean.parseBoolean(ContextStore.get("keep-email-logs", "false"));
+        pairs = new ArrayList<>();
         participants = getParticipants();
         receivers = new ArrayList<>(participants);
         log = new Printer(SecretSantaScript.class);
@@ -70,6 +74,9 @@ public class SecretSantaScript {
                 );
             }
             log.success("All Secret Santa emails (" + participants.size() + " people) are sent!");
+            if (logsOn)
+                for (String pair:pairs)
+                    log.info(pair);
         }
         catch (Exception exception){
             log.error(exception.getLocalizedMessage(), exception);
@@ -87,8 +94,10 @@ public class SecretSantaScript {
 
         receivers.remove(randomIndex);
 
-        if (Boolean.parseBoolean(ContextStore.get("keep-email-logs", "false")))
+        if (logsOn) {
             log.info(santa.getName() + " matched with " + receiver.getName());
+            pairs.add(santa.getName() + " matched with " + receiver.getName());
+        }
         return receiver;
     }
 
